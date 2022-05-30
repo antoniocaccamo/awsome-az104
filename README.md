@@ -12,6 +12,7 @@ Only statements that are directly related to exam questions are added to this co
 
 ## Azure Active Directory (AAD)
 
+### Global Administrators
 
 |fasdf | dafdasf|
 |--------|---------|
@@ -20,6 +21,23 @@ Only statements that are directly related to exam questions are added to this co
 
 - Reference: [Add Users to Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory?view=azure-devops)
 
-<details>
-  <summary>Demo</summary>
-</details>
+
+
+<table>
+  <tr>
+    <th>Statement</th>
+    <td>Global Administrators must be added to a Tenant before they're able to </td>
+  </tr>
+  <tr>
+    <th>Vegetable</th>
+    <td>Carrot</td>
+  </tr>
+  <tr>
+    <th>Demo</th>
+    <td>
+      <details>
+        <summary>Demo</summary>
+      </details>
+    </td>
+  </tr>
+</table>
