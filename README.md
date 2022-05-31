@@ -19,6 +19,6 @@ Reference: [Add Users to Active Directory](https://docs.microsoft.com/en-us/azur
 <details>
   <summary>Azure Portal Demo</summary>
   As we can see in this example, none of the existing users of Tenant A are copied to the new Tenant B upon it's creation.
-  <img src="demos/aad/aad_global_administrators.gif" width=862 ></img>
+  <img src="demos/aad/aad_global_administrators.gif" width=600 ></img>
 </details>
 
