@@ -35,9 +35,9 @@ The reason being that a change on the subnet is also required, as demonstrated i
 
 <details>
   <summary>Exception</summary>
-  ```
+  <code>
   Message: The client 'Admin1@yourdomain.onmicrosoft.com' with object id '00000' has permission to perform action 'Microsoft.Network/loadBalancers/write' on scope '/subscriptions/00000/resourceGroups/rg-awsomeaz104-loadbalancer-permissions-demo/providers/Microsoft.Network/loadBalancers/lbi-awsomeaz104-loadbalancer-permissions-demo'; however, it does not have permission to perform action 'Microsoft.Network/virtualNetworks/subnets/join/action' on the linked scope(s) '/subscriptions/00000/resourceGroups/rg-awsomeaz104-loadbalancer-permissions-demo/providers/Microsoft.Network/virtualNetworks/vnet-awsomeaz104-loadbalancer-permissions-demo/subnets/LBI-Subnet' or the linked scope(s) are invalid.
-  ```
+  </code>
 </details>
 
 In the experiment the following output was reproduced, this of course given that the Virtual Network resides on the same Resource Group.
