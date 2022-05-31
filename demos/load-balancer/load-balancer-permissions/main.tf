@@ -53,6 +53,12 @@ resource "azurerm_resource_group" "default" {
   location = var.location
 }
 
+resource "azurerm_role_assignment" "read" {
+  scope                = azurerm_resource_group.default.id
+  role_definition_name = "Reader"
+  principal_id         = azuread_user.admin1.object_id
+}
+
 # Internal Load Balancer
 
 resource "azurerm_virtual_network" "default" {
