@@ -8,7 +8,7 @@ A curated collection of AZ-104 certification statements accompanied by reference
 
 Only statements that are directly related to exam questions are added to this collection.
 
-## Azure Active Directory (AAD)
+## Azure Active Directory
 
 ### New Tenant User Management
 
@@ -23,7 +23,7 @@ Reference: [Add Users to Active Directory](https://docs.microsoft.com/en-us/azur
   <img src="demos/aad/aad_new_tenant_user_management.gif" width=650></img>
 </details>
 
-## Load Balancer (LB / ILB, ELB)
+## Load Balancer
 
 ### Load Balancer Least Privilege Permissions
 
