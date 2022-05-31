@@ -25,8 +25,15 @@ provider "azurerm" {
 ### Variables ###
 
 variable "location" {
-  default   = "eastus"
-  sensitive = false
+  default     = "eastus"
+  sensitive   = false
+  description = "Change this to a location near you"
+}
+
+variable "storage_account_name" {
+  default     = "stawsomeaz104cloudshell"
+  sensitive   = false
+  description = "Change in case the default is already taken"
 }
 
 locals {
@@ -46,6 +53,7 @@ resource "azuread_user" "admin1" {
   password            = local.password
 }
 
+
 ### Resources ###
 
 resource "azurerm_resource_group" "default" {
@@ -58,6 +66,27 @@ resource "azurerm_role_assignment" "read" {
   role_definition_name = "Reader"
   principal_id         = azuread_user.admin1.object_id
 }
+
+resource "azurerm_storage_account" "cloud_shell" {
+  name                     = var.storage_account_name
+  location                 = azurerm_resource_group.default.location
+  resource_group_name      = azurerm_resource_group.default.name
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
+resource "azurerm_storage_share" "cloud_shell" {
+  name                 = "cloud-shell"
+  storage_account_name = azurerm_storage_account.cloud_shell.name
+  quota                = 1
+}
+
+resource "azurerm_role_assignment" "shell" {
+  scope                = azurerm_storage_account.cloud_shell.id
+  role_definition_name = "Storage Account Contributor"
+  principal_id         = azuread_user.admin1.object_id
+}
+
 
 # Internal Load Balancer
 
@@ -108,6 +137,7 @@ resource "azurerm_lb" "lbe" {
     public_ip_address_id = azurerm_public_ip.lbe.id
   }
 }
+
 
 ### Outputs
 

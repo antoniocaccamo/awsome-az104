@@ -28,14 +28,6 @@ To test and list `Admin1` all current assignments:
 az role assignment list --assignee $assignee --all
 ```
 
-## Commands
+## Running the Example
 
-From the folder [scripts](scripts) create and remove the permissions to run the tests:
-
-Example:
-
-```bash
-bash scripts/create_contributor_to_lbi.sh
-
-bash scripts/delete_contributor_from_lbi.sh
-```
+From the folder [scripts](scripts) select 
