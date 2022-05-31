@@ -41,7 +41,7 @@ The reason being that a change on the subnet is also required, as demonstrated i
 In the experiment the following output was reproduced, this of course given that the Virtual Network resides on the same Resource Group.
 
 | Target | Assignment | Scope | Action | Result | Least <br> Privilege | 
-|------------|-------|--------|--------|-|-----------------|
+|------------|-------|--------|--------|:-:|:-----------------:|
 | ELB | Contributor | External Load Balancer | Add Backend Pool | ❌ | ❌ |
 | ELB | Network Contributor | External Load Balancer | Add Backend Pool | ❌ | ❌ |
 | ELB | Network Contributor | Resource Group | Add Backend Pool | ✅ | ✅ |
