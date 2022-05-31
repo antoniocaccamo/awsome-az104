@@ -12,7 +12,7 @@ Only statements that are directly related to exam questions are added to this co
 
 ### Global Administrators
 
-Global Administrators of an existing Tenant A must be added to a newly created Tenant B before they're able to manage users of that new Tenant. The only user which will have manage permissions is the administrator that created the new Tenant B.
+Global Administrators of an existing Tenant A must be added to a newly created Tenant B before they're able to manage users of that new Tenant B. The only user which will have manage permissions is the administrator that created the new Tenant B.
 
 Reference: [Add Users to Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory?view=azure-devops)
 
