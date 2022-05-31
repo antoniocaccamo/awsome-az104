@@ -30,4 +30,6 @@ az role assignment list --assignee $assignee --all
 
 ## Running the Example
 
-From the folder [scripts](scripts) select 
+Open a local shell session for your subscription owner, and a cloud shell instance with Admin1 user.
+
+From the folder [scripts](scripts) open the file and apply the script depending on shell instance you're in.
