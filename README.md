@@ -18,9 +18,12 @@ Reference: [Add Users to Active Directory](https://docs.microsoft.com/en-us/azur
 
 <details>
   <summary>Azure Portal Demo</summary>
-  As we can see in this example, none of the existing users of Tenant A are added to the new Tenant B upon it's creation.
+  As we can see in this example, none of the existing users of Tenant A are added to the new Tenant B upon it's creation, with the exception of the Tenant B creator.
 
   <img src="demos/aad/aad_new_tenant_user_management.gif" width=650></img>
 </details>
 
+## Load Balancer (ILB, ELB)
+
+### Load Balancer Permissions
 
