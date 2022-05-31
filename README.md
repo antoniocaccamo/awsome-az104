@@ -27,7 +27,7 @@ Reference: [Add Users to Active Directory](https://docs.microsoft.com/en-us/azur
 
 ### Load Balancer Least Privilege Permissions
 
-For an administrator to be able to create Backend Pools on ELBs and Health Probes on ILBs the minimum permission that they'll need is `Network Contributor` on those resources.
+For an administrator to be able to create Backend Pools on ELBs and Health Probes on ILBs the minimum permission that they'll need is `Network Contributor` on those resources AND in the Virtual Network.
 
 The reason being that a change on the subnet is also required, as demonstrated in the following exception.
 
