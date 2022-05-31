@@ -28,12 +28,12 @@ az role assignment list --assignee $assignee --all
 
 ## Commands
 
-From the folder [scripts](scripts) add and remove the permissions to run the tests:
+From the folder [scripts](scripts) create and remove the permissions to run the tests:
 
 Example:
 
 ```bash
-bash scripts/add_contributor_to_lbi.sh
+bash scripts/create_contributor_to_lbi.sh
 
 bash scripts/delete_contributor_from_lbi.sh
 ```
