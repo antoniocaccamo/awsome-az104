@@ -1,0 +1,13 @@
+[book]
+author = "Evandro Pomatti"
+language = "en"
+multilingual = false
+src = "src"
+title = "Awsome AZ-104"
+
+[output.html]
+default-theme = "dark"
+preferred-dark-theme = "ayu"
+curly-quotes = true
+git-repository-url = "https://github.com/epomatti/awsome-az104"
+edit-url-template = "https://github.com/epomatti/awsome-az104/edit/main/book/{path}"
