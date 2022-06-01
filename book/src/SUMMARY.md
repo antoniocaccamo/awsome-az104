@@ -3,7 +3,7 @@
 
 # Azure Modules
 
-- [Active Directory](ad/README.md)
-    - [New Tenant User Management](ad/new-tenant-user-management.md)
-- [Load Balancer](lb/README.md)
-    - [Load Balancer Least Privilege Permissions](lb/lb-least-privilege-permissions.md)
+- [Active Directory](modules/ad/README.md)
+    - [New Tenant User Management](modules/ad/new-tenant-user-management.md)
+- [Load Balancer](modules/lb/README.md)
+    - [Load Balancer Least Privilege Permissions](modules/lb/lb-least-privilege-permissions.md)
