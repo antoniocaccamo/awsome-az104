@@ -27,8 +27,11 @@ jobs:
       #     command: install
       #     args: mdbook
 
-      # - name: Build the book
-      #   run: mdbook build ./book
+      - name: Download mdbook Build the book
+        run: |
+          mkdir bin
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.18/mdbook-v0.4.18-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
+          bin/mdbook build ./book
 
       - name: Install Vercel CLI
         run: npm i -g vercel
