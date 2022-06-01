@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>New Tenant User Management - Awsome AZ-104</title>
+        <title>Grant access to AKS - Awsome AZ-104</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Azure Modules</li><li class="chapter-item expanded "><a href="../../modules/ad/index.html"><strong aria-hidden="true">1.</strong> Active Directory</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../modules/ad/new-tenant-user-management.html" class="active"><strong aria-hidden="true">1.1.</strong> New Tenant User Management</a></li></ol></li><li class="chapter-item expanded "><a href="../../modules/aks/index.html"><strong aria-hidden="true">2.</strong> Kubernetes Services (AKS)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../modules/aks/grant-access.html"><strong aria-hidden="true">2.1.</strong> Grant access to AKS</a></li></ol></li><li class="chapter-item expanded "><a href="../../modules/lb/index.html"><strong aria-hidden="true">3.</strong> Load Balancer</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../modules/lb/lb-least-privilege-permissions.html"><strong aria-hidden="true">3.1.</strong> Load Balancer Least Privilege Permissions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Azure Modules</li><li class="chapter-item expanded "><a href="../../modules/ad/index.html"><strong aria-hidden="true">1.</strong> Active Directory</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../modules/ad/new-tenant-user-management.html"><strong aria-hidden="true">1.1.</strong> New Tenant User Management</a></li></ol></li><li class="chapter-item expanded "><a href="../../modules/aks/index.html"><strong aria-hidden="true">2.</strong> Kubernetes Services (AKS)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../modules/aks/grant-access.html" class="active"><strong aria-hidden="true">2.1.</strong> Grant access to AKS</a></li></ol></li><li class="chapter-item expanded "><a href="../../modules/lb/index.html"><strong aria-hidden="true">3.</strong> Load Balancer</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../modules/lb/lb-least-privilege-permissions.html"><strong aria-hidden="true">3.1.</strong> Load Balancer Least Privilege Permissions</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -113,7 +113,7 @@
                         <a href="https://github.com/epomatti/awsome-az104" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/epomatti/awsome-az104/edit/main/book/src/modules/ad/new-tenant-user-management.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/epomatti/awsome-az104/edit/main/book/src/modules/aks/grant-access.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
                     </div>
@@ -140,20 +140,53 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="new-tenant-user-management"><a class="header" href="#new-tenant-user-management">New Tenant User Management</a></h1>
-<p>Existing AAD admins (Global Administrators, User Administrators, Owners) of an existing Tenant A must be added to a newly created Tenant B before they’re able to manage users of that new Tenant B. The only user which will have instant management permissions is the administrator that created the new Tenant B.</p>
-<p>Reference: <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory?view=azure-devops">Add Users to Active Directory</a></p>
-<p>As we can see in this example, none of the existing users of Tenant A are added to the new Tenant B upon it’s creation, with the exception of the Tenant B creator.</p>
-<p><img src="../../assets/aad_new_tenant_user_management.gif" width=650></img></p>
+                        <h1 id="grant-access-to-aks"><a class="header" href="#grant-access-to-aks">Grant access to AKS</a></h1>
+<p>As documented in <a href="https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies">Kubernetes Authentication Strategies</a>:</p>
+<blockquote>
+<p>Kubernetes uses client certificates, bearer tokens, or an authenticating proxy to authenticate API requests through authentication plugins.</p>
+</blockquote>
+<p>And, as per Microsoft <a href="https://docs.microsoft.com/en-us/azure/aks/concepts-identity">Access and Identity</a> docs:</p>
+<blockquote>
+<p>You can authenticate, authorize, secure, and control access to Kubernetes clusters in a variety of ways.</p>
+<ul>
+<li>Using Kubernetes role-based access control (Kubernetes RBAC), you can grant users, groups, and service accounts access to only the &gt; resources they need.</li>
+<li>With Azure Kubernetes Service (AKS), you can further enhance the security and permissions structure via Azure Active Directory and &gt; Azure RBAC.</li>
+</ul>
+</blockquote>
+<p>As we can see there are many options to grant access in AKS. Let’s look into some examples below.</p>
+<h2 id="demo"><a class="header" href="#demo">Demo</a></h2>
+<p>For a hands-on experience, run the <a href="https://github.com/epomatti/awsome-az104/tree/main/demos/aks/grant-access">demo</a> to create your environment and test these scenarios.</p>
+<h2 id="rbac"><a class="header" href="#rbac">RBAC</a></h2>
+<p>You can manage access using <a href="https://docs.microsoft.com/en-us/azure/aks/manage-azure-rbac">AKS RBAC</a>. This feature needs Managed AAD to be enabled in the AKS, along with enabling the RBAC feature itself.</p>
+<pre><code class="language-sh">az aks create -g 'MyResourceGroup' -n 'MyManagedCluster' --enable-aad --enable-azure-rbac
+</code></pre>
+<p>This has the advantage of granular permissions, such as applying different permissions to specific namespaces.</p>
+<p>There are also some limitations to this approach, make sure to check the documentation.</p>
+<h3 id="aad-application-registration"><a class="header" href="#aad-application-registration">AAD Application Registration</a></h3>
+<p>Another form of authorization in Kubernetes is by creating an Application Registration on AAD and assigning permissions to that application to the AKS resource via IAM.</p>
+<p>Although this works in practice, it is far less recommended to provide this tot end-users, and an RBAC approach would be much appropriate.</p>
+<p>Snippet from the <a href="https://kubernetes.io/docs/reference/access-authn-authz/authentication/#openid-connect-tokens">docs</a>:</p>
+<pre><code>kubectl config set-credentials USER_NAME \
+   --auth-provider=oidc \
+   --auth-provider-arg=idp-issuer-url=( issuer url ) \
+   --auth-provider-arg=client-id=( your client id ) \
+   --auth-provider-arg=client-secret=( your client secret ) \
+   --auth-provider-arg=refresh-token=( your refresh token ) \
+   --auth-provider-arg=idp-certificate-authority=( path to your ca certificate ) \
+   --auth-provider-arg=id-token=( your id_token )
+</code></pre>
+<h3 id="oidc"><a class="header" href="#oidc">OIDC</a></h3>
+<p>Azure Kubernetes Services also can act as a OIDC issuer, which at the time of this writing is in Preview.</p>
+<p>To see that running alongside <a href="https://github.com/Azure/azure-workload-identity">Azure Workload Identity</a>, checkout my other <a href="https://github.com/epomatti/azure-workload-identity-terraform">repository</a>.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../modules/ad/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../modules/aks/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../../modules/aks/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../../modules/lb/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -162,10 +195,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../modules/ad/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../modules/aks/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../../modules/aks/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../modules/lb/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

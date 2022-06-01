@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>New Tenant User Management - Awsome AZ-104</title>
+        <title>Kubernetes Services (AKS) - Awsome AZ-104</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Azure Modules</li><li class="chapter-item expanded "><a href="../../modules/ad/index.html"><strong aria-hidden="true">1.</strong> Active Directory</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../modules/ad/new-tenant-user-management.html" class="active"><strong aria-hidden="true">1.1.</strong> New Tenant User Management</a></li></ol></li><li class="chapter-item expanded "><a href="../../modules/aks/index.html"><strong aria-hidden="true">2.</strong> Kubernetes Services (AKS)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../modules/aks/grant-access.html"><strong aria-hidden="true">2.1.</strong> Grant access to AKS</a></li></ol></li><li class="chapter-item expanded "><a href="../../modules/lb/index.html"><strong aria-hidden="true">3.</strong> Load Balancer</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../modules/lb/lb-least-privilege-permissions.html"><strong aria-hidden="true">3.1.</strong> Load Balancer Least Privilege Permissions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Azure Modules</li><li class="chapter-item expanded "><a href="../../modules/ad/index.html"><strong aria-hidden="true">1.</strong> Active Directory</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../modules/ad/new-tenant-user-management.html"><strong aria-hidden="true">1.1.</strong> New Tenant User Management</a></li></ol></li><li class="chapter-item expanded "><a href="../../modules/aks/index.html" class="active"><strong aria-hidden="true">2.</strong> Kubernetes Services (AKS)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../modules/aks/grant-access.html"><strong aria-hidden="true">2.1.</strong> Grant access to AKS</a></li></ol></li><li class="chapter-item expanded "><a href="../../modules/lb/index.html"><strong aria-hidden="true">3.</strong> Load Balancer</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../modules/lb/lb-least-privilege-permissions.html"><strong aria-hidden="true">3.1.</strong> Load Balancer Least Privilege Permissions</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -113,7 +113,7 @@
                         <a href="https://github.com/epomatti/awsome-az104" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/epomatti/awsome-az104/edit/main/book/src/modules/ad/new-tenant-user-management.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/epomatti/awsome-az104/edit/main/book/src/modules/aks/README.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
                     </div>
@@ -140,20 +140,16 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="new-tenant-user-management"><a class="header" href="#new-tenant-user-management">New Tenant User Management</a></h1>
-<p>Existing AAD admins (Global Administrators, User Administrators, Owners) of an existing Tenant A must be added to a newly created Tenant B before they’re able to manage users of that new Tenant B. The only user which will have instant management permissions is the administrator that created the new Tenant B.</p>
-<p>Reference: <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory?view=azure-devops">Add Users to Active Directory</a></p>
-<p>As we can see in this example, none of the existing users of Tenant A are added to the new Tenant B upon it’s creation, with the exception of the Tenant B creator.</p>
-<p><img src="../../assets/aad_new_tenant_user_management.gif" width=650></img></p>
+                        <h1 id="kubernetes-services-aks"><a class="header" href="#kubernetes-services-aks">Kubernetes Services (AKS)</a></h1>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../../modules/ad/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../../modules/ad/new-tenant-user-management.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../../modules/aks/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../../modules/aks/grant-access.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -162,10 +158,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../../modules/ad/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../../modules/ad/new-tenant-user-management.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../../modules/aks/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../../modules/aks/grant-access.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
