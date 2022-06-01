@@ -11,3 +11,8 @@ preferred-dark-theme = "ayu"
 curly-quotes = true
 git-repository-url = "https://github.com/epomatti/awsome-az104"
 edit-url-template = "https://github.com/epomatti/awsome-az104/edit/main/book/{path}"
+site-url = "https://awsomeaz104.pomatti.io"
+
+[output.html.fold]
+enable = true
+level = 0
