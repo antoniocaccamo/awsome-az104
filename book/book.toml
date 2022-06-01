@@ -15,4 +15,4 @@ site-url = "https://awsome-az104.pomatti.io"
 
 [output.html.fold]
 enable = true
-level = 0
+level = 1
