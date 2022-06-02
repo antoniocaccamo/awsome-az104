@@ -5,6 +5,7 @@
 
 - [Active Directory](modules/ad/README.md)
     - [New Tenant User Management](modules/ad/new-tenant-user-management.md)
+    - [Groups with automatic deletion](modules/ad/group-automatic-user-expiration.md)
 - [Kubernetes Services (AKS)](modules/aks/README.md)
     - [Grant access to AKS](modules/aks/grant-access.md)
 - [Load Balancer](modules/lb/README.md)
