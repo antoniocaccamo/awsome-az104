@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Azure Modules</li><li class="chapter-item expanded "><a href="modules/ad/index.html"><strong aria-hidden="true">1.</strong> Active Directory</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/ad/new-tenant-user-management.html"><strong aria-hidden="true">1.1.</strong> New Tenant User Management</a></li></ol></li><li class="chapter-item expanded "><a href="modules/aks/index.html"><strong aria-hidden="true">2.</strong> Kubernetes Services (AKS)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/aks/grant-access.html"><strong aria-hidden="true">2.1.</strong> Grant access to AKS</a></li></ol></li><li class="chapter-item expanded "><a href="modules/lb/index.html"><strong aria-hidden="true">3.</strong> Load Balancer</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/lb/lb-least-privilege-permissions.html"><strong aria-hidden="true">3.1.</strong> Load Balancer Least Privilege Permissions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Azure Modules</li><li class="chapter-item expanded "><a href="modules/ad/index.html"><strong aria-hidden="true">1.</strong> Active Directory</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/ad/new-tenant-user-management.html"><strong aria-hidden="true">1.1.</strong> New Tenant User Management</a></li><li class="chapter-item "><a href="modules/ad/group-automatic-user-expiration.html"><strong aria-hidden="true">1.2.</strong> Groups with automatic deletion</a></li></ol></li><li class="chapter-item expanded "><a href="modules/aks/index.html"><strong aria-hidden="true">2.</strong> Kubernetes Services (AKS)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/aks/grant-access.html"><strong aria-hidden="true">2.1.</strong> Grant access to AKS</a></li></ol></li><li class="chapter-item expanded "><a href="modules/lb/index.html"><strong aria-hidden="true">3.</strong> Load Balancer</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/lb/lb-least-privilege-permissions.html"><strong aria-hidden="true">3.1.</strong> Load Balancer Least Privilege Permissions</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -147,6 +147,17 @@
 <p>Reference: <a href="https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory?view=azure-devops">Add Users to Active Directory</a></p>
 <p>As we can see in this example, none of the existing users of Tenant A are added to the new Tenant B upon it’s creation, with the exception of the Tenant B creator.</p>
 <p><img src="modules/ad/../../assets/aad_new_tenant_user_management.gif" width=650></img></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="groups-with-automatic-deletion"><a class="header" href="#groups-with-automatic-deletion">Groups with automatic deletion</a></h1>
+<blockquote>
+<p>Requires Azure AD Premium</p>
+</blockquote>
+<p>As demonstrated in the <a href="https://docs.microsoft.com/en-us/microsoft-365/solutions/microsoft-365-groups-expiration-policy?view=o365-worldwide">documentation</a>, only Microsoft 365 groups can be associated for the expiration policy.</p>
+<p>As stated in the tool tip:</p>
+<blockquote>
+<p>Expiration will only be applied to Microsoft 365 groups</p>
+</blockquote>
+<p>You can try out in this <strong><a href="https://github.com/epomatti/awsome-az104/tree/main/demos/aks/grant-access">demo</a></strong> with various groups created.</p>
+<p><img src="modules/ad/../../assets/ad_group_expiration.png" alt="Expiration on the Portal" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kubernetes-services-aks"><a class="header" href="#kubernetes-services-aks">Kubernetes Services (AKS)</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="grant-access-to-aks"><a class="header" href="#grant-access-to-aks">Grant access to AKS</a></h1>
 <p>As documented in <a href="https://kubernetes.io/docs/reference/access-authn-authz/authentication/#authentication-strategies">Kubernetes Authentication Strategies</a>:</p>
