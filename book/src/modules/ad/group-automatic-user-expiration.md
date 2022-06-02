@@ -14,4 +14,4 @@ You can try out in this **[demo][3]** with various groups created.
 
 [1]: https://docs.microsoft.com/en-us/microsoft-365/solutions/microsoft-365-groups-expiration-policy?view=o365-worldwide
 [2]: ../../assets/ad_group_expiration.png
-[3]: https://github.com/epomatti/awsome-az104/tree/main/demos/aks/grant-access
+[3]: https://github.com/epomatti/awsome-az104/tree/main/demos/aad/group-automatic-user-expiration
