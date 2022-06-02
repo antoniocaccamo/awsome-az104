@@ -1,8 +1,5 @@
 # Developement
 
-## Book
-
 ```sh
-cd book
-mdbook serve
+mdbook serve --open
 ```
