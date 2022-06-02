@@ -11,3 +11,5 @@
     - [Grant access to AKS](modules/aks/grant-access.md)
 - [Load Balancer](modules/lb/README.md)
     - [Load Balancer Least Privilege Permissions](modules/lb/lb-least-privilege-permissions.md)
+- [Management Groups](modules/mg/README.md)
+    - [Mgt Groups Permissions](modules/mg/mg-permissions.md)
