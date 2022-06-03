@@ -84,31 +84,30 @@ resource "azurerm_management_group_subscription_association" "sub2" {
 
 # Policies
 
-resource "azurerm_policy_definition" "notallow_vnet_root" {
-  name                = "only-deploy-in-westeurope"
-  policy_type         = "BuiltIn"
-  mode                = "All"
-  management_group_id = data.azurerm_management_group.root.id
-
-
-  policy_rule = <<POLICY_RULE
+resource "azurerm_management_group_policy_assignment" "notallowed_resourcetypes_root" {
+  name                 = "NotAllowedRoot"
+  policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/6c112d4e-5bc7-47ae-a041-ea2d9dccd749"
+  management_group_id  = data.azurerm_management_group.root.id
+  enforce              = true
+  parameters           = <<PARAMETERS
     {
-    "if": {
-      "not": {
-        "field": "location",
-        "equals": "westeurope"
+      "listOfResourceTypesNotAllowed": { 
+        "value": [ "Microsoft.Network/virtualNetworks" ]
       }
-    },
-    "then": {
-      "effect": "Deny"
     }
-  }
-POLICY_RULE
+  PARAMETERS
 }
 
-
-# resource "azurerm_management_group_policy_assignment" "notallow_vnet_root" {
-#   name                 = "NotAllowVnetsOnRoot"
-#   policy_definition_id = azurerm_policy_definition.notallow_vnet_root.id
-#   management_group_id  = data.azurerm_management_group.root.id
-# }
+resource "azurerm_management_group_policy_assignment" "allowed_resourcetypes_group12" {
+  name                 = "AllowedGroup12"
+  policy_definition_id = "/providers/Microsoft.Authorization/policyDefinitions/a08ec900-254a-4555-9bf5-e42af04b5c5c"
+  management_group_id  = azurerm_management_group.mg12.id
+  enforce              = true
+  parameters           = <<PARAMETERS
+    {
+      "listOfResourceTypesAllowed": { 
+        "value": [ "Microsoft.Network/virtualNetworks" ]
+      }
+    }
+  PARAMETERS
+}
