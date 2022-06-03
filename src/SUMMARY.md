@@ -12,4 +12,4 @@
 - [Load Balancer](modules/lb/README.md)
     - [Load Balancer Least Privilege Permissions](modules/lb/lb-least-privilege-permissions.md)
 - [Management Groups](modules/mg/README.md)
-    - [Mgt Groups Permissions](modules/mg/mg-permissions.md)
+    - [Management Groups Permissions](modules/mg/mg-permissions.md)

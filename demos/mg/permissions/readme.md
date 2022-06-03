@@ -52,7 +52,7 @@ This command should also fail.
 ### Add Subscription1 to Group11
 
 ```bash
-az account management-group subscription add -n -s 'Subscription1'
+az account management-group subscription add -n '<management-group>' -s 'Subscription1'
 ```
 
 This command will fail because Subscription1 is already part of a Management Group.
