@@ -22,7 +22,7 @@ az role definition create --role-definition '@cr1.json'
 Content from [sample-cr1.json](sample-cr1.json):
 
 ```json
-{{#include cr1.json}}
+{{#include sample-cr1.json}}
 ```
 
 Clean up after:
