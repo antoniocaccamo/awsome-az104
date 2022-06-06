@@ -15,3 +15,4 @@
     - [Management Groups Permissions](modules/mg/mg-permissions.md)
 - [Policies](modules/policies/README.md)
     - [Resource Types](modules/policies/resource-types/readme.md)
+    - [Tags](modules/policies/tags/readme.md)
