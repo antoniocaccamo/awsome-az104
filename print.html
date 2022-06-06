@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Azure Modules</li><li class="chapter-item expanded "><a href="modules/ad/index.html"><strong aria-hidden="true">1.</strong> Active Directory</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/ad/new-tenant-user-management.html"><strong aria-hidden="true">1.1.</strong> New Tenant User Management</a></li><li class="chapter-item "><a href="modules/ad/group-automatic-user-expiration.html"><strong aria-hidden="true">1.2.</strong> Groups with automatic deletion</a></li><li class="chapter-item "><a href="modules/ad/access-review.html"><strong aria-hidden="true">1.3.</strong> Access Review</a></li></ol></li><li class="chapter-item expanded "><a href="modules/aks/index.html"><strong aria-hidden="true">2.</strong> Kubernetes Services (AKS)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/aks/grant-access.html"><strong aria-hidden="true">2.1.</strong> Grant access to AKS</a></li></ol></li><li class="chapter-item expanded "><a href="modules/lb/index.html"><strong aria-hidden="true">3.</strong> Load Balancer</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/lb/lb-least-privilege-permissions.html"><strong aria-hidden="true">3.1.</strong> Load Balancer Least Privilege Permissions</a></li></ol></li><li class="chapter-item expanded "><a href="modules/mg/index.html"><strong aria-hidden="true">4.</strong> Management Groups</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/mg/mg-permissions.html"><strong aria-hidden="true">4.1.</strong> Management Groups Permissions</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Azure Modules</li><li class="chapter-item expanded "><a href="modules/ad/index.html"><strong aria-hidden="true">1.</strong> Active Directory</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/ad/new-tenant-user-management.html"><strong aria-hidden="true">1.1.</strong> New Tenant User Management</a></li><li class="chapter-item "><a href="modules/ad/group-automatic-user-expiration.html"><strong aria-hidden="true">1.2.</strong> Groups with automatic deletion</a></li><li class="chapter-item "><a href="modules/ad/access-review.html"><strong aria-hidden="true">1.3.</strong> Access Review</a></li></ol></li><li class="chapter-item expanded "><a href="modules/aks/index.html"><strong aria-hidden="true">2.</strong> Kubernetes Services (AKS)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/aks/grant-access.html"><strong aria-hidden="true">2.1.</strong> Grant access to AKS</a></li></ol></li><li class="chapter-item expanded "><a href="modules/lb/index.html"><strong aria-hidden="true">3.</strong> Load Balancer</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/lb/lb-least-privilege-permissions.html"><strong aria-hidden="true">3.1.</strong> Load Balancer Least Privilege Permissions</a></li></ol></li><li class="chapter-item expanded "><a href="modules/mg/index.html"><strong aria-hidden="true">4.</strong> Management Groups</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/mg/mg-permissions.html"><strong aria-hidden="true">4.1.</strong> Management Groups Permissions</a></li></ol></li><li class="chapter-item expanded "><a href="modules/policies/index.html"><strong aria-hidden="true">5.</strong> Policies</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="modules/policies/resource-types/index.html"><strong aria-hidden="true">5.1.</strong> Resource Types</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -144,7 +144,8 @@
 <p><img src="icons/ad.svg" width=30> </img>
 <img src="icons/aks.svg" width=30> </img>
 <img src="icons/lb.svg" width=30> </img>
-<img src="icons/mg.svg" width=30> </img></p>
+<img src="icons/mg.svg" width=30> </img>
+<img src="icons/policy.svg" width=30> </img></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="active-directory"><a class="header" href="#active-directory">Active Directory</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="new-tenant-user-management"><a class="header" href="#new-tenant-user-management">New Tenant User Management</a></h1>
 <p>Existing AAD admins (Global Administrators, User Administrators, Owners) of an existing Tenant A must be added to a newly created Tenant B before they’re able to manage users of that new Tenant B. The only user which will have instant management permissions is the administrator that created the new Tenant B.</p>
@@ -253,6 +254,31 @@
 <p>It is not possible to add subscription to more than one management group.</p>
 <p>For example, giving the same scenario above, this command would fail:</p>
 <pre><code class="language-bash">az account management-group subscription add -n '&lt;management-group-11&gt;' -s 'Subscription1'
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="policies"><a class="header" href="#policies">Policies</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="policy---not-allowed-resource-types"><a class="header" href="#policy---not-allowed-resource-types">Policy - Not Allowed Resource Types</a></h1>
+<p>The <a href="https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749">Not Allowed Resources Policy</a> prevents resources to be created according to the scope and exclusion list.</p>
+<p>Run the demo to test it quickly.</p>
+<h2 id="demo-1"><a class="header" href="#demo-1">Demo</a></h2>
+<h3 id="setup"><a class="header" href="#setup">Setup</a></h3>
+<pre><code class="language-sh">terraform init
+terraform apply -auto-approve
+</code></pre>
+<h3 id="execute"><a class="header" href="#execute">Execute</a></h3>
+<pre><code class="language-sh">location='brazilsouth'
+
+# This is allowed
+az sql server create -l $location -g 'ContosoRG1' -n 'sql-awsomeaz104-testserver1' -u 'testAdmin' -p 'T3st4dminPazz!999'
+
+# This is NOT allowed
+az sql server create -l $location -g 'ContosoRG2' -n 'sql-awsomeaz104-testserver2' -u 'testAdmin' -p 'T3st4dminPazz!999'
+</code></pre>
+<hr />
+<p>Clean up after use:</p>
+<pre><code class="language-sh">az sql server delete -g 'ContosoRG1' -n 'sql-awsomeaz104-testserver1' -y
+az sql server delete -g 'ContosoRG2' -n 'sql-awsomeaz104-testserver2' -y
+
+terraform destroy -auto-approve
 </code></pre>
 
                     </main>
