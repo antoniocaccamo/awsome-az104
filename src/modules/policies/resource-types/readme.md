@@ -2,10 +2,6 @@
 
 The [Not Allowed Resources Policy](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2Fproviders%2FMicrosoft.Authorization%2FpolicyDefinitions%2F6c112d4e-5bc7-47ae-a041-ea2d9dccd749) prevents resources to be created according to the scope and exclusion list.
 
-Run the demo to test it quickly.
-
-## Demo
-
 ### Setup
 
 ```sh
