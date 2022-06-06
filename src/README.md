@@ -8,3 +8,4 @@ Search by typing **`S`** on your keyboard, or use search icon (🔍) at the top.
 <img src="icons/aks.svg" width=30> </img>
 <img src="icons/lb.svg" width=30> </img>
 <img src="icons/mg.svg" width=30> </img>
+<img src="icons/policy.svg" width=30> </img>

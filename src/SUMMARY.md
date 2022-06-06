@@ -13,3 +13,5 @@
     - [Load Balancer Least Privilege Permissions](modules/lb/lb-least-privilege-permissions.md)
 - [Management Groups](modules/mg/README.md)
     - [Management Groups Permissions](modules/mg/mg-permissions.md)
+- [Policies](modules/policies/README.md)
+    - [Resource Types](modules/policies/resource-types/readme.md)
