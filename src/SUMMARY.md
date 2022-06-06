@@ -16,3 +16,5 @@
 - [Policies](modules/policies/README.md)
     - [Resource Types](modules/policies/resource-types/readme.md)
     - [Tags](modules/policies/tags/readme.md)
+- [Recovery Services Vault](modules/rsv/README.md)
+    - [Delete Resources](modules/rsv/delete-resources/readme.md)

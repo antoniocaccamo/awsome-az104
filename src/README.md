@@ -1,6 +1,6 @@
 # Introduction
 
-A comprehensive collection of statements, references, tips and functional demos covering the various topics required for [AZ-140 Microsoft Azure Administrator](https://docs.microsoft.com/en-us/learn/certifications/exams/az-104) certification exam.
+A comprehensive collection of demos covering the various topics required for [AZ-140 Microsoft Azure Administrator](https://docs.microsoft.com/en-us/learn/certifications/exams/az-104) certification exam.
 
 Search by typing **`S`** on your keyboard, or use search icon (🔍) at the top.
 
@@ -9,3 +9,4 @@ Search by typing **`S`** on your keyboard, or use search icon (🔍) at the top.
 <img src="icons/lb.svg" width=30> </img>
 <img src="icons/mg.svg" width=30> </img>
 <img src="icons/policy.svg" width=30> </img>
+<img src="icons/rsv.svg" width=30> </img>

@@ -1,5 +1,5 @@
 # Awsome AZ-104
 
-A curated collection of AZ-104 certification statements accompanied by references and demos.
+A collection of AZ-104 certification demos.
 
 https://awsome-az104.pomatti.io/
