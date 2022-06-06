@@ -1,0 +1,14 @@
+{
+  "Name": "CR1",
+  "IsCustom": true,
+  "Description": "Custom permissions for AZ-104",
+  "Actions": [
+    "*"
+  ],
+  "NotActions": [
+    "Microsoft.Authorization/*"
+  ],
+  "AssignableScopes": [
+    "/subscriptions/{subscriptionId}"
+  ]
+}

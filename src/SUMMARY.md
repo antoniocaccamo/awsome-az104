@@ -18,3 +18,5 @@
     - [Tags](modules/policies/tags/readme.md)
 - [Recovery Services Vault](modules/rsv/README.md)
     - [Delete Resources](modules/rsv/delete-resources/readme.md)
+- [Roles](modules/roles/README.md)
+    - [Custom Role](modules/roles/custom-roles/readme.md)
