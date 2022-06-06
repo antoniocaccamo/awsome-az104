@@ -333,7 +333,20 @@ az account show --query 'id' -o tsv
 az role definition create --role-definition '@cr1.json'
 </code></pre>
 <p>Content from <a href="modules/roles/custom-roles/sample-cr1.json">sample-cr1.json</a>:</p>
-<pre><code class="language-json">{{#include cr1.json}}
+<pre><code class="language-json">{
+  &quot;Name&quot;: &quot;CR1&quot;,
+  &quot;IsCustom&quot;: true,
+  &quot;Description&quot;: &quot;Custom permissions for AZ-104&quot;,
+  &quot;Actions&quot;: [
+    &quot;*&quot;
+  ],
+  &quot;NotActions&quot;: [
+    &quot;Microsoft.Authorization/*&quot;
+  ],
+  &quot;AssignableScopes&quot;: [
+    &quot;/subscriptions/{subscriptionId}&quot;
+  ]
+}
 </code></pre>
 <p>Clean up after:</p>
 <pre><code class="language-sh">az role definition delete -n 'CR1'
