@@ -155,7 +155,7 @@ az vm create -n 'vm-az104' -g 'rg-az104' --image 'UbuntuLTS'
 </code></pre>
 <p>Now create the first backup:</p>
 <pre><code class="language-sh">az backup protection backup-now \
-  # --container-name MyContainer \
+  --container-name 'iaasvmcontainerv2;rg-az104;vm-az104' \
   --item-name 'vm-az104' \
   --resource-group 'rg-az104' \
   --retain-until '01-02-2025' \
@@ -167,12 +167,15 @@ az vm create -n 'vm-az104' -g 'rg-az104' --image 'UbuntuLTS'
 </code></pre>
 <p>The first step to permit RSV deletion is to stop backup on the items:</p>
 <pre><code class="language-sh">az backup protection disable \
-  # --container-name MyContainer \
+  --container-name 'iaasvmcontainerv2;rg-az104;vm-az104' \
   --backup-management-type 'AzureIaasVM' \
   --delete-backup-data false \
   --item-name 'vm-az104' \
   --resource-group 'rg-az104' \
   --vault-name 'rsv-az104' --yes
+</code></pre>
+<p>If backup items exist, they should be unregistered before the RSV can be deleted.</p>
+<pre><code class="language-sh">az backup container unregister --container-name 'iaasvmcontainerv2;rg-az104;vm-az104' -g 'rg-az104' --vault-name 'rsv-az104' --backup-management-type 'AzureIaasVM'
 </code></pre>
 
                     </main>
