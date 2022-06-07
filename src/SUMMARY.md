@@ -20,5 +20,7 @@
     - [Delete Resources](modules/rsv/delete-resources/readme.md)
 - [Roles](modules/roles/README.md)
     - [Custom Role](modules/roles/custom-roles/readme.md)
+- [Storage Accounts](modules/storage/README.md)
+    - [On-premises azcopy](modules/storage/azcopy/readme.md)
 - [Virtual Machines](modules/vm/README.md)
     - [ARM Template](modules/vm/arm-template/readme.md)
