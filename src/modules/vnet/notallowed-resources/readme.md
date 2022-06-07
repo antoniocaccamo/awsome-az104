@@ -12,14 +12,18 @@ terraform init
 terraform apply -auto-approve
 ```
 
-Once done, try executing the following commands:
+Once done, try executing the following commands.
+
+You'll see that both tasks are prohibited by the policy.
 
 
 ```sh
-# move VNET1 to RG2
+# validate / move VNET1 to RG2
 vnet1=$(az resource show -g 'RG1' -n 'VNET1' --resource-type "Microsoft.Network/virtualNetworks" --query id --output tsv)
 az resource move --destination-group 'RG2' --ids $vnet1
 
 # Change VNET prefix
+az vm delete -g 'VNET2' -n 'VM1' --yes
+az network vnet subnet delete --name 'internal' --resource-group 'RG2' --vnet-name 'VNET2'
 az network vnet update --address-prefixes '40.1.0.0/24' -n 'VNET2' -g 'RG2'
 ```
