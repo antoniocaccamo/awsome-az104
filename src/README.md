@@ -5,6 +5,7 @@ A comprehensive collection of demos covering the various topics required for [AZ
 <img src="icons/ad.svg" width=30> </img>
 <img src="icons/aks.svg" width=30> </img>
 <img src="icons/ci.svg" width=30> </img>
+<img src="icons/sync.svg" width=30> </img>
 <img src="icons/lb.svg" width=30> </img>
 <img src="icons/mg.svg" width=30> </img>
 <img src="icons/policy.svg" width=30> </img>
