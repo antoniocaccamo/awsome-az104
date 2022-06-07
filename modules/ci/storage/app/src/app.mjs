@@ -1,5 +1,6 @@
 import express from 'express';
 import AzureStorageBlob from '@azure/storage-blob';
+import { DefaultAzureCredential } from "@azure/identity";
 import 'dotenv/config';
 
 (async function () {
@@ -11,8 +12,23 @@ import 'dotenv/config';
   const port = 3000
 
   app.get('/api/sastoken', async (req, res) => {
-    // const credential = new DefaultAzureCredential();
     const client = new AzureStorageBlob.BlobServiceClient(`https://${STORAGE_NAME}.blob.core.windows.net?${SAS_TOKEN}`);
+    const containerClient = client.getContainerClient("blobs");
+    const blobClient = containerClient.getBlobClient("file.txt");
+    const downloadBlockBlobResponse = await blobClient.download();
+    const downloaded = (
+      await streamToBuffer(downloadBlockBlobResponse.readableStreamBody)
+    ).toString();
+    console.log("Downloaded blob content:", downloaded);
+    res.send(downloaded);
+  })
+
+  app.get('/api/managedidentity', async (req, res) => {
+    const defaultAzureCredential = new DefaultAzureCredential();
+    const client = new AzureStorageBlob.BlobServiceClient(
+      `https://${STORAGE_NAME}.blob.core.windows.net`,
+      defaultAzureCredential
+    );
     const containerClient = client.getContainerClient("blobs");
     const blobClient = containerClient.getBlobClient("file.txt");
     const downloadBlockBlobResponse = await blobClient.download();

@@ -36,6 +36,10 @@ variable "storage_account_name" {
   description = "Change in case the default is already taken"
 }
 
+variable "image_build" {
+  description = "Add your image path to .auto.tfvars"
+}
+
 locals {
   app_affix = "awsomeaz104"
 }
@@ -72,7 +76,7 @@ resource "azurerm_container_group" "app1" {
 
   container {
     name   = "app1"
-    image  = "mcr.microsoft.com/azuredocs/aci-helloworld:latest"
+    image  = var.image_build
     cpu    = "0.5"
     memory = "1.5"
 
@@ -81,23 +85,4 @@ resource "azurerm_container_group" "app1" {
       protocol = "TCP"
     }
   }
-
-  container {
-    name   = "app2"
-    image  = "mcr.microsoft.com/azuredocs/aci-tutorial-sidecar"
-    cpu    = "0.5"
-    memory = "1.5"
-
-    ports {
-      port     = 80
-      protocol = "TCP"
-    }
-  }
-
 }
-
-# resource "azurerm_storage_share" "cloud_shell" {
-#   name                 = "cloud-shell"
-#   storage_account_name = azurerm_storage_account.cloud_shell.name
-#   quota                = 1
-# }
