@@ -302,12 +302,15 @@ curl http://localhost:3000/api/managedidentity
 <pre><code class="language-sh">terraform init
 terraform apply -auto-approve
 </code></pre>
-<p>Once done, try executing the following commands:</p>
-<pre><code class="language-sh"># move VNET1 to RG2
+<p>Once done, try executing the following commands.</p>
+<p>You’ll see that both tasks are prohibited by the policy.</p>
+<pre><code class="language-sh"># validate / move VNET1 to RG2
 vnet1=$(az resource show -g 'RG1' -n 'VNET1' --resource-type &quot;Microsoft.Network/virtualNetworks&quot; --query id --output tsv)
 az resource move --destination-group 'RG2' --ids $vnet1
 
 # Change VNET prefix
+az vm delete -g 'VNET2' -n 'VM1' --yes
+az network vnet subnet delete --name 'internal' --resource-group 'RG2' --vnet-name 'VNET2'
 az network vnet update --address-prefixes '40.1.0.0/24' -n 'VNET2' -g 'RG2'
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="policies"><a class="header" href="#policies">Policies</a></h1>
