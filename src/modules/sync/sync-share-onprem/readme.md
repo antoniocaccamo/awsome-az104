@@ -1,4 +1,4 @@
-# Create Sync
+# Sync File Share to On-Premises Server
 
 This exercise will demonstrate the correct steps to Sync files from a cloud share to an on-premises server.
 

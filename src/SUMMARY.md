@@ -9,8 +9,6 @@
     - [Access Review](modules/ad/access-review.md)
 - [Container Instances](modules/ci/README.md)
     - [Storage integration](modules/ci/storage/readme.md)
-- [File Sync](modules/sync/README.md)
-    - [Create Sync](modules/sync/create-sync/readme.md)
 - [Kubernetes Services (AKS)](modules/aks/README.md)
     - [Grant access to AKS](modules/aks/grant-access.md)
 - [Load Balancer](modules/lb/README.md)
@@ -26,7 +24,7 @@
     - [Custom Role](modules/roles/custom-roles/readme.md)
 - [Storage Accounts](modules/storage/README.md)
     - [On-premises azcopy](modules/storage/azcopy/readme.md)
-<!-- - [Storage Sync Services](modules/storage/README.md)
-    - [Sync cloud Share to an on-premises Server](modules/sync/share-to/readme.md) -->
+- [Storage Sync Services](modules/sync/README.md)
+    - [Sync cloud Share to an on-premises Server](modules/sync/sync-share-onprem/readme.md)
 - [Virtual Machines](modules/vm/README.md)
     - [ARM Template](modules/vm/arm-template/readme.md)
