@@ -26,6 +26,7 @@
     - [Custom Role](modules/roles/custom-roles/readme.md)
 - [Storage Accounts](modules/storage/README.md)
     - [On-premises azcopy](modules/storage/azcopy/readme.md)
+    - [Create a container with azcopy](modules/storage/create-container-azcopy/readme.md)
 - [Storage Sync Services](modules/sync/README.md)
     - [Sync cloud Share to an on-premises Server](modules/sync/sync-share-onprem/readme.md)
 - [Virtual Machines](modules/vm/README.md)
