@@ -15,6 +15,8 @@
     - [Load Balancer Least Privilege Permissions](modules/lb/lb-least-privilege-permissions.md)
 - [Management Groups](modules/mg/README.md)
     - [Management Groups Permissions](modules/mg/mg-permissions.md)
+- [Virtual Networks](modules/vnet/README.md)
+    - [Virtuall Network Not Allowed Resource Types policy](modules/vnet/notallowed-resources/readme.md)
 - [Policies](modules/policies/README.md)
     - [Resource Types](modules/policies/resource-types/readme.md)
     - [Tags](modules/policies/tags/readme.md)

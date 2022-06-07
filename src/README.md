@@ -12,5 +12,6 @@ A comprehensive collection of demos covering the various topics required for [AZ
 <img src="icons/storage.svg" width=30> </img>
 <img src="icons/storage-sync.svg" width=30> </img>
 <img src="icons/vm.svg" width=30> </img>
+<img src="icons/vnet.svg" width=30> </img>
 
 Search by typing **`S`** on your keyboard, or use search icon (🔍) at the top.
