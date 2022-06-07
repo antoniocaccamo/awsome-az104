@@ -10,7 +10,7 @@ Create the resources:
 
 ```sh
 terraform init
-terraform apply -autoa-approve
+terraform apply -auto-approve
 ```
 
 Upload the test blob to the container:
