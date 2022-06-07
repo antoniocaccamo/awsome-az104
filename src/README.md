@@ -10,4 +10,5 @@ Search by typing **`S`** on your keyboard, or use search icon (🔍) at the top.
 <img src="icons/mg.svg" width=30> </img>
 <img src="icons/policy.svg" width=30> </img>
 <img src="icons/rsv.svg" width=30> </img>
+<img src="icons/storage.svg" width=30> </img>
 <img src="icons/vm.svg" width=30> </img>
