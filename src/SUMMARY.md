@@ -20,3 +20,5 @@
     - [Delete Resources](modules/rsv/delete-resources/readme.md)
 - [Roles](modules/roles/README.md)
     - [Custom Role](modules/roles/custom-roles/readme.md)
+- [Virtual Machines](modules/vm/README.md)
+    - [ARM Template](modules/vm/arm-template/readme.md)
