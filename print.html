@@ -358,58 +358,28 @@ az role definition create --role-definition '@cr1.json'
 <h3 id="create-the-resource-group"><a class="header" href="#create-the-resource-group">Create the Resource Group</a></h3>
 <p>For this example you create the resource group separately (or reuse one you have).</p>
 <pre><code class="language-ps1"># PowerShell
-$resourceGroupName=&quot;your-resource-group-name&quot;
-$location=&quot;brazilsouth&quot;
-
 Connect-AzAccount
-New-AzResourceGroup -Name $resourceGroupName -Location $location
+New-AzResourceGroup -Name &quot;rg-vm&quot;-Location &quot;brazilsouth&quot;
 </code></pre>
 <pre><code class="language-bash"># Azure CLI
-resourceGroupName=&quot;your-resource-group-name&quot;
-location=&quot;brazilsouth&quot;
-
 az login
-az group create --name $resourceGroupName --location $location
+az group create --name &quot;rg-vm&quot; --location &quot;brazilsouth&quot;
 </code></pre>
-<h3 id="set-the-variables"><a class="header" href="#set-the-variables">Set the variables</a></h3>
-<pre><code class="language-ps1"># PowerShell
-$templateFile=&quot;azuredeploy.json&quot;
-
-$storageName=&quot;st888999arm&quot;
-$storageSku=&quot;Standard_GRS&quot;
-$storageKind=&quot;StorageV2&quot;
-$vmSize=&quot;Standard_A2_v2&quot;
-</code></pre>
-<pre><code class="language-bash"># Azure CLI
-templateFile=&quot;azuredeploy.json&quot;
-
-storageName=&quot;st888999arm&quot;
-storageSku=&quot;Standard_GRS&quot;
-storageKind=&quot;StorageV2&quot;
-vmSize=&quot;Standard_A2_v2&quot;
-</code></pre>
-<h3 id="trigger-the-deployment"><a class="header" href="#trigger-the-deployment">Trigger the deployment</a></h3>
+<h3 id="create-the-group-deployment"><a class="header" href="#create-the-group-deployment">Create the Group Deployment</a></h3>
 <pre><code class="language-ps1"># PowerShell
 New-AzResourceGroupDeployment `
   -Name DeployLocalTemplate `
-  -ResourceGroupName $resourceGroupName `
-  -TemplateFile $templateFile `
-  -storageName $storageName `
-  -storageSku $storageSku `
-  -storageKind $storageKind `
-  -vmSize $vmSize `
+  -ResourceGroupName &quot;rg-vm&quot; `
+  -TemplateFile &quot;@azuredeploy.json&quot; `
+  -TemplateParameterFile '@azuredeploy-parameters.json'
   -verbose
 </code></pre>
 <pre><code class="language-bash"># Azure CLI
 az deployment group create \
   --name DeployLocalTemplate \
-  --resource-group $resourceGroupName \
-  --template-file $templateFile \
-  --parameters \
-  storageName=$storageName \
-  storageSku=$storageSku \
-  storageKind=$storageKind \
-  vmSize=$vmSize \
+  --resource-group 'rg-vm' \
+  --template-file '@azuredeploy.json' \
+  --parameters '@azuredeploy-parameters.json'
   --verbose
 </code></pre>
 
