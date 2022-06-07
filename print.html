@@ -350,6 +350,17 @@ terraform apply -auto-approve
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="stop-backup"><a class="header" href="#stop-backup">Stop Backup</a></h1>
 <p>This example demonstrate that it is necessary to stop VM backups before it is allowed to an RSV to be deleted.</p>
+<p>From the <a href="https://docs.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=portal">documentation</a>:</p>
+<blockquote>
+<p>You can’t delete a Recovery Services vault with any of the following dependencies:</p>
+<ul>
+<li>You can’t delete a vault that contains protected data sources (for example, IaaS VMs, SQL databases, Azure file shares).</li>
+<li>You can’t delete a vault that contains backup data. Once backup data is deleted, it will go into the soft deleted state.</li>
+<li>You can’t delete a vault that contains backup data in the soft deleted state.</li>
+<li>You can’t delete a vault that has registered storage accounts.</li>
+</ul>
+</blockquote>
+<p>To test these requirements:</p>
 <pre><code class="language-sh">az group create -n 'rg-az104' -l 'brazilsouth'
 az backup vault create -l 'brazilsouth' --name 'rsv-az104' -g 'rg-az104'
 az vm create -n 'vm-az104' -g 'rg-az104' --image 'UbuntuLTS'
