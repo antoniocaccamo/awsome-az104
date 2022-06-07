@@ -2,4 +2,4 @@
 
 A collection of AZ-104 certification demos.
 
-https://awsome-az104.pomatti.io/
+https://az104.pomatti.io/
