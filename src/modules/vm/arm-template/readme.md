@@ -1,6 +1,6 @@
 # ARM Template
 
-Create a VM using ARM template
+Create a VM using ARM template for both **PowerShell** and **Azure CLI**.
 
 ### Create the Resource Group
 
