@@ -2,6 +2,17 @@
 
 This example demonstrate that it is necessary to stop VM backups before it is allowed to an RSV to be deleted.
 
+From the [documentation](https://docs.microsoft.com/en-us/azure/backup/backup-azure-delete-vault?tabs=portal):
+
+> You can't delete a Recovery Services vault with any of the following dependencies:
+> 
+> - You can't delete a vault that contains protected data sources (for example, IaaS VMs, SQL databases, Azure file shares).
+> - You can't delete a vault that contains backup data. Once backup data is deleted, it will go into the soft deleted state.
+> - You can't delete a vault that contains backup data in the soft deleted state.
+> - You can't delete a vault that has registered storage accounts.
+
+To test these requirements:
+
 ```sh
 az group create -n 'rg-az104' -l 'brazilsouth'
 az backup vault create -l 'brazilsouth' --name 'rsv-az104' -g 'rg-az104'
