@@ -149,7 +149,7 @@
 </ul>
 <p>Create the resources:</p>
 <pre><code class="language-sh">terraform init
-terraform apply -autoa-approve
+terraform apply -auto-approve
 </code></pre>
 <p>Upload the test blob to the container:</p>
 <pre><code class="language-sh">az storage blob upload -f 'file.txt' -c 'blobs' --account-name 'stawsomeaz104'
