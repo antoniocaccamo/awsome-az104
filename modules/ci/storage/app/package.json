@@ -1,6 +1,15 @@
 {
   "name": "app",
-  "packageManager": "yarn@3.2.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@azure/storage-blob": "^12.10.0",
     "dotenv": "^16.0.1",

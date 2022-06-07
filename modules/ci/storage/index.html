@@ -141,13 +141,33 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="container-instances-storage-integration"><a class="header" href="#container-instances-storage-integration">Container Instances: Storage integration</a></h1>
+<p>This example demonstrate permissions for Container Instances to access Storage accounts.</p>
+<p>There are two modes demonstrated here:</p>
+<ul>
+<li>Service Principal - To reduce the amount of credentials needed</li>
+<li>SAS Token - To restrict the time allowed for access via expiration dates</li>
+</ul>
+<p>Create the resources:</p>
+<pre><code class="language-sh">terraform init
+terraform apply -autoa-approve
+</code></pre>
+<p>Upload the test blob to the container:</p>
+<pre><code class="language-sh">az storage blob upload -f 'file.txt' -c 'blobs' --account-name 'stawsomeaz104'
+</code></pre>
 <p>Generate the SAS token:</p>
-<pre><code>```sh
-end=`date -u -d &quot;60 minutes&quot; '+%Y-%m-%dT%H:%MZ'`
+<pre><code class="language-sh">end=`date -u -d &quot;60 minutes&quot; '+%Y-%m-%dT%H:%MZ'`
 
 az storage account generate-sas --permissions 'acdfilprrtuwxy' --account-name 'stawsomeaz104' --services 'b' --resource-types 'sco' --expiry $end -o tsv
 </code></pre>
-<pre><code></code></pre>
+<p>Add values to the <code>.env</code> file.</p>
+<p>Start the server:</p>
+<pre><code class="language-sh">npm install
+npm start
+</code></pre>
+<p>Local testing:</p>
+<pre><code class="language-sh">curl http://localhost:3000/api/sastoken
+curl http://localhost:3000/api/managedidentity
+</code></pre>
 
                     </main>
 
