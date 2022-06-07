@@ -7,6 +7,8 @@
     - [New Tenant User Management](modules/ad/new-tenant-user-management.md)
     - [Groups with automatic deletion](modules/ad/group-automatic-user-expiration.md)
     - [Access Review](modules/ad/access-review.md)
+- [Container Instances](modules/ci/README.md)
+    - [Storage integration](modules/ci/storage/readme.md)
 - [Kubernetes Services (AKS)](modules/aks/README.md)
     - [Grant access to AKS](modules/aks/grant-access.md)
 - [Load Balancer](modules/lb/README.md)
