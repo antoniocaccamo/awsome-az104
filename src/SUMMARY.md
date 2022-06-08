@@ -45,5 +45,6 @@
     - [Sync cloud Share to an on-premises Server](modules/sync/sync-share-onprem/readme.md)
 - [Virtual Machines](modules/vm/README.md)
     - [ARM Template](modules/vm/arm-template/readme.md)
+    - [Monitor Metrics and Logs of a Linux VM](modules/vm/mon-metrics-logs/readme.md)
 - [Virtual Networks](modules/vnet/README.md)
     - [Virtual Network Not Allowed Resource Types policy](modules/vnet/notallowed-resources/readme.md)
