@@ -8,9 +8,10 @@ az vmss create \
   -g 'rg-az104' \
   --instance-count 1 \
   --image 'Win2022Datacenter' \
-  --custom-data '@clout-init.txt' \
+  --custom-data @clout-init.txt \
   --admin-username 'azureuser' \
-  --admin-password 'SecretPassAz104!'
+  --admin-password 'SecretPassAz104!' \
+  --public-ip-per-vm
 ```
 
 Example with [cloud-init](https://cloudbase-init.readthedocs.io/en/latest/index.html):
