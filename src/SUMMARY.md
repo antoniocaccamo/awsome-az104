@@ -7,6 +7,8 @@
     - [New Tenant User Management](modules/ad/new-tenant-user-management.md)
     - [Groups with automatic deletion](modules/ad/group-automatic-user-expiration.md)
     - [Access Review](modules/ad/access-review.md)
+- [App Services](modules/app/README.md)
+    - [App and Plan need to be on same location](modules/app/same-location/readme.md)
 - [Container Instances](modules/ci/README.md)
     - [Storage integration](modules/ci/storage/readme.md)
 - [Kubernetes Services (AKS)](modules/aks/README.md)
