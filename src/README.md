@@ -8,6 +8,7 @@ A comprehensive collection of demos covering the various topics required for [AZ
 <img src="icons/lb.svg" width=30 />
 <img src="icons/log.svg" width=30 />
 <img src="icons/mg.svg" width=30 />
+<img src="icons/monitor.svg" width=30 />
 <img src="icons/policy.svg" width=30 />
 <img src="icons/rsv.svg" width=30 />
 <img src="icons/storage.svg" width=30 />

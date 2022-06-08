@@ -17,6 +17,8 @@
     - [Location Independence](modules/log/location-independence/readme.md)
 - [Management Groups](modules/mg/README.md)
     - [Management Groups Permissions](modules/mg/mg-permissions.md)
+- [Monitor](modules/monitor/README.md)
+    - [Create Alert for VM](modules/monitor/vm-alerts/readme.md)
 - [Policies](modules/policies/README.md)
     - [Resource Types](modules/policies/resource-types/readme.md)
     - [Tags](modules/policies/tags/readme.md)
