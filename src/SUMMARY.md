@@ -29,6 +29,8 @@
 - [Recovery Services Vault](modules/rsv/README.md)
     - [Delete Resources](modules/rsv/delete-resources/readme.md)
     - [Stop Backup](modules/rsv/stop-backup/readme.md)
+- [Resource Groups](modules/rg/README.md)
+    - [Resource Locks](modules/rg/resource-locks/readme.md)
 - [Roles](modules/roles/README.md)
     - [Custom Role](modules/roles/custom-roles/readme.md)
 - [Scale Sets](modules/vm/README.md)
