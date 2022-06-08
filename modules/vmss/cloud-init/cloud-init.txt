@@ -1,0 +1,4 @@
+<powershell>
+$root = $env:SystemDrive
+New-Item -path "$root\NewFile.txt"
+</powershell>
