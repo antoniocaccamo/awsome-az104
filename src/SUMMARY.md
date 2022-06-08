@@ -13,6 +13,8 @@
     - [Manage VMs](modules/automation/manage-vms/readme.md)
 - [Container Instances](modules/ci/README.md)
     - [Storage integration](modules/ci/storage/readme.md)
+- [Container Registries](modules/acr/README.md)
+    - [Push Images](modules/acr/push/readme.md)
 - [Kubernetes Services (AKS)](modules/aks/README.md)
     - [Grant access to AKS](modules/aks/grant-access.md)
 - [Load Balancer](modules/lb/README.md)
