@@ -9,6 +9,8 @@
     - [New Tenant User Management](modules/ad/new-tenant-user-management.md)
 - [App Services](modules/app/README.md)
     - [App and Plan need to be on same location](modules/app/same-location/readme.md)
+- [Automation Accounts](modules/automation/README.md)
+    - [Manage VMs](modules/automation/manage-vms/readme.md)
 - [Container Instances](modules/ci/README.md)
     - [Storage integration](modules/ci/storage/readme.md)
 - [Kubernetes Services (AKS)](modules/aks/README.md)
