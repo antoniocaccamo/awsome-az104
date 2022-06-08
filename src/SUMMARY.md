@@ -29,6 +29,8 @@
     - [Stop Backup](modules/rsv/stop-backup/readme.md)
 - [Roles](modules/roles/README.md)
     - [Custom Role](modules/roles/custom-roles/readme.md)
+- [Scale Sets](modules/vm/README.md)
+    - [Provision with cloud-init](modules/vmss/cloud-init/readme.md)
 - [Storage Accounts](modules/storage/README.md)
     - [On-premises azcopy](modules/storage/azcopy/readme.md)
     - [Create a container with azcopy](modules/storage/create-container-azcopy/readme.md)
