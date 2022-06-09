@@ -36,7 +36,7 @@ az backup protection backup-now \
   --backup-management-type 'AzureIaasVM'
 ```
 
-Upon completion of the backup, two options wil be available:
+Upon completion of the backup, two options will be available:
 
 - Restore VM
 - File Recovery
