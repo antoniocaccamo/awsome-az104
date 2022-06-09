@@ -36,6 +36,7 @@
 - [Roles](modules/roles/README.md)
     - [Custom Role](modules/roles/custom-roles/readme.md)
 - [Scale Sets](modules/vm/README.md)
+    - [Change Size](modules/vmss/change-size/readme.md)
     - [Extension Profile](modules/vmss/extension-profile/readme.md)
     - [Provision with cloud-init](modules/vmss/cloud-init/readme.md)
 - [Storage Accounts](modules/storage/README.md)
