@@ -15,6 +15,7 @@ A comprehensive collection of demos covering the various topics required for [AZ
 <img src="icons/policy.svg" width=30 />
 <img src="icons/rsv.svg" width=30 />
 <img src="icons/rg.svg" width=30 />
+<img src="icons/rt.svg" width=30 />
 <img src="icons/vmss.svg" width=30 />
 <img src="icons/storage.svg" width=30 />
 <img src="icons/storage-sync.svg" width=30 />

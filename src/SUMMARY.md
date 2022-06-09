@@ -50,3 +50,4 @@
     - [Monitor Metrics and Logs of a Linux VM](modules/vm/mon-metrics-logs/readme.md)
 - [Virtual Networks](modules/vnet/README.md)
     - [Virtual Network Not Allowed Resource Types policy](modules/vnet/notallowed-resources/readme.md)
+    - [Routing Tables](modules/vnet/routing-tables/readme.md)
