@@ -18,6 +18,7 @@
 - [Kubernetes Services (AKS)](modules/aks/README.md)
     - [Grant access to AKS](modules/aks/grant-access.md)
 - [Load Balancer](modules/lb/README.md)
+    - [Balance to Network Virtual Appliance (NVA)](modules/lb/nva/readme.md)
     - [Load Balancer Least Privilege Permissions](modules/lb/lb-least-privilege-permissions.md)
 - [Log Analytics](modules/log/README.md)
     - [Location Independence](modules/log/location-independence/readme.md)
