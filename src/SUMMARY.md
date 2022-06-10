@@ -27,6 +27,7 @@
 - [Monitor](modules/monitor/README.md)
     - [Create Alert for VM](modules/monitor/vm-alerts/readme.md)
 - [Networking](modules/vnet/README.md)
+    - [Application Security Group](modules/vnet/asg/readme.md)
     - [Peering Overlap](modules/vnet/peering/readme.md)
     - [Recreate Peering](modules/vnet/recreate-peering/readme.md)
     - [Routing Tables](modules/vnet/routing-tables/readme.md)
