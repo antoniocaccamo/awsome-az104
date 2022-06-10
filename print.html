@@ -302,7 +302,7 @@ curl http://localhost:3000/api/managedidentity
 <p>HA Ports allow the LB to drop the ports and protocols requirements for balancing rules, forwarding all ports and protocols to the destination</p>
 </blockquote>
 <blockquote>
-<p>Floating IP = <code>enabled</code> means that the request will have the IP and Port replaced with the destination VM. If <code>disabled</code> (default), the IP and Ports will correspond to the LB frontend.</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-floating-ip">Floating IP</a> = <code>enabled</code> means that the request will have the IP and Port replaced with LB name and port. If <code>disabled</code> (default), the IP and Ports will correspond to the destination.</p>
 </blockquote>
 <p>To load balancer request for a Network Virtual appliance, HA ports are required:</p>
 <ul>
@@ -310,6 +310,7 @@ curl http://localhost:3000/api/managedidentity
 <li>Standard SKU</li>
 </ul>
 <p>Must Internal + Standard to enable HA Ports.</p>
+<p>And Floating IP must be <code>enabled</code> when creating the rule, so in case of multiple services responding to the same Port.</p>
 <pre><code class="language-sh">az network lb create -g 'rg-az104' -n 'lb-az104-standard' --sku 'Standard' --private-ip-address '10.0.0.x'
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="load-balancer-least-privilege-permissions"><a class="header" href="#load-balancer-least-privilege-permissions">Load Balancer Least Privilege Permissions</a></h1>
