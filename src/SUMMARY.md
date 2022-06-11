@@ -30,6 +30,7 @@
     - [Application Security Group](modules/vnet/asg/readme.md)
     - [Peering Overlap](modules/vnet/peering/readme.md)
     - [Recreate Peering](modules/vnet/recreate-peering/readme.md)
+    - [Reverse DNS](modules/vnet/reverse-dns/readme.md)
     - [Routing Tables](modules/vnet/routing-tables/readme.md)
     - [Virtual Network Not Allowed Resource Types policy](modules/vnet/notallowed-resources/readme.md)
 - [Policies](modules/policies/README.md)
