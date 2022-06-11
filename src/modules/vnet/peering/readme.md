@@ -1,5 +1,7 @@
 # Peering
 
+## Example 1 - Not possible
+
 This example demonstrates that it is not possible to do VNET peering between overlapping CIDR addresses.
 
 Based on the follow setup:
@@ -17,6 +19,21 @@ az network vnet subnet create -g 'rg-az104' --vnet-name 'VNet1' -n 'internal' --
 It is not possible to peer the VNETs. This operation will fail.
 
 ```sh
+az network vnet peering create -g 'rg-az104' -n 'peering' \
+  --vnet-name 'VNet1' \
+  --remote-vnet 'VNet2' \
+  --allow-vnet-access
+```
+
+## Example 2 - Possible
+
+In this other example it IS possible to peer the VNets:
+
+```
+az network vnet create -g 'rg-az104' -n 'VNet1' --address-prefixes '10.10.10.0/24'
+
+az network vnet create -g 'rg-az104' -n 'VNet2' --address-prefixes '10.10.128.0/17'
+
 az network vnet peering create -g 'rg-az104' -n 'peering' \
   --vnet-name 'VNet1' \
   --remote-vnet 'VNet2' \
