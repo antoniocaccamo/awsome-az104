@@ -413,6 +413,7 @@ az network asg create -g 'rg-az104' -n 'asg-az104'
 <pre><code class="language-sh">az network nic ip-config update -n 'ipconfigvm-az104' -g 'rg-az104' --nic-name 'vm-az104VMNic' --application-security-groups 'asg-az104'
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="peering"><a class="header" href="#peering">Peering</a></h1>
+<h2 id="example-1---not-possible"><a class="header" href="#example-1---not-possible">Example 1 - Not possible</a></h2>
 <p>This example demonstrates that it is not possible to do VNET peering between overlapping CIDR addresses.</p>
 <p>Based on the follow setup:</p>
 <pre><code class="language-sh">az group create -l 'brazilsouth' -n 'rg-az104'
@@ -425,6 +426,17 @@ az network vnet subnet create -g 'rg-az104' --vnet-name 'VNet1' -n 'internal' --
 </code></pre>
 <p>It is not possible to peer the VNETs. This operation will fail.</p>
 <pre><code class="language-sh">az network vnet peering create -g 'rg-az104' -n 'peering' \
+  --vnet-name 'VNet1' \
+  --remote-vnet 'VNet2' \
+  --allow-vnet-access
+</code></pre>
+<h2 id="example-2---possible"><a class="header" href="#example-2---possible">Example 2 - Possible</a></h2>
+<p>In this other example it IS possible to peer the VNets:</p>
+<pre><code>az network vnet create -g 'rg-az104' -n 'VNet1' --address-prefixes '10.10.10.0/24'
+
+az network vnet create -g 'rg-az104' -n 'VNet2' --address-prefixes '10.10.128.0/17'
+
+az network vnet peering create -g 'rg-az104' -n 'peering' \
   --vnet-name 'VNet1' \
   --remote-vnet 'VNet2' \
   --allow-vnet-access
